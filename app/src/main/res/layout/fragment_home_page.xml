@@ -61,15 +61,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="300dp"
+            android:background="@drawable/bg_rounded_8dp_no_ripple"
             android:minHeight="300dp"
-            android:background="@drawable/bg_rounded_8dp_no_ripple">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
-                android:paddingTop="@dimen/d_8"
-                android:paddingEnd="@dimen/d_8"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:paddingTop="@dimen/d_8"
+                android:paddingEnd="@dimen/d_8"
                 android:text="@string/leading_expert"
                 android:textAllCaps="true"
                 android:textColor="@color/black"
@@ -79,7 +80,7 @@
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/lstExpert"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent" />
         </LinearLayout>
 
     </ScrollView>

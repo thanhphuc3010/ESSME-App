@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">ESSME</string>
     <string name="leading_expert">Leading Expert</string>
+    <string name="Introduction">Introduction</string>
+    <string name="Expert_name">Expert Name</string>
+    <string name="Position">Position</string>
+    <string name="company_university">Company/University</string>
+    <string name="order_expert">order Expert</string>
+    <string name="hint_requirement">Enter your requirement ...</string>
+    <string name="send">Send</string>
+    <string name="information_technology">Information Technology</string>
 </resources>
