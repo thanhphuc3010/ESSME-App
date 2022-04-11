@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
  * Time: 8:33 PM
  */
 
+@FunctionalInterface
 public interface IFragmentInflate<T> {
     T inflate(LayoutInflater inflater, @Nullable ViewGroup container, Boolean attachToParent);
 }

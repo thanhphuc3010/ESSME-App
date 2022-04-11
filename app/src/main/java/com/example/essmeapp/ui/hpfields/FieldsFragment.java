@@ -11,6 +11,7 @@ import com.example.essmeapp.model.Fields;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,7 +22,7 @@ import java.util.List;
 
 public class FieldsFragment extends BaseViewBindingFragment<FragmentFieldBinding> {
     private FieldAdapter adapter;
-    private List<Fields> fields;
+    private ArrayList<Fields> fields;
 
     public FieldsFragment() {
         super(FragmentFieldBinding::inflate);
@@ -39,7 +40,7 @@ public class FieldsFragment extends BaseViewBindingFragment<FragmentFieldBinding
 
     @Override
     public void initializeComponents() {
-        adapter = new FieldAdapter(requireContext());
+        adapter = new FieldAdapter();
         GridLayoutManager layoutManager = new GridLayoutManager(requireContext(), 2);
         binding.lstField.setLayoutManager(layoutManager);
         binding.lstField.setAdapter(adapter);
