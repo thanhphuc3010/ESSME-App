@@ -1,16 +1,20 @@
 package com.example.essmeapp.ui.homepage;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 import com.example.essmeapp.codebase.BaseFragment;
 import com.example.essmeapp.databinding.FragmentHomePageBinding;
 import com.example.essmeapp.model.Expert;
+import com.example.essmeapp.model.Fields;
 import com.example.essmeapp.model.HomePage;
+import com.example.essmeapp.ui.hpfields.FieldViewPagerAdapter;
 import com.example.essmeapp.ui.hptopexpert.TopExpertAdapter;
 
 import java.util.List;
@@ -29,7 +33,8 @@ public class HomePageFragment extends BaseFragment<FragmentHomePageBinding, Home
 
     public final String Tag = this.getClass().getSimpleName();
 
-    private TopExpertAdapter adapter;
+    private TopExpertAdapter topExpertAdapter;
+    private FieldViewPagerAdapter fieldAdapter;
 
     public HomePageFragment() {
         super(FragmentHomePageBinding::inflate);
@@ -57,8 +62,11 @@ public class HomePageFragment extends BaseFragment<FragmentHomePageBinding, Home
 
     @Override
     public void initializeComponents() {
-        adapter = new TopExpertAdapter(requireActivity());
-        binding.lstExpert.setAdapter(adapter);
+        topExpertAdapter = new TopExpertAdapter(requireActivity());
+        binding.lstExpert.setAdapter(topExpertAdapter);
+
+        fieldAdapter = new FieldViewPagerAdapter(requireActivity());
+        binding.lstField.setAdapter(fieldAdapter);
     }
 
     @Override
@@ -69,12 +77,15 @@ public class HomePageFragment extends BaseFragment<FragmentHomePageBinding, Home
     @Override
     public void initializeData() {
         viewModel.getHomePage.enqueue(new Callback<HomePage>() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onResponse(Call<HomePage> call, Response<HomePage> response) {
                 HomePage homePage = response.body();
                 List<Expert> experts = homePage.getTopExperts();
-                adapter.submitData(experts);
-                Log.d(Tag, "" + experts.size());
+                topExpertAdapter.submitData(experts);
+
+                List<Fields> fields = homePage.getFields();
+                fieldAdapter.submitData(viewModel.adjustField4View(fields));
             }
 
             @Override

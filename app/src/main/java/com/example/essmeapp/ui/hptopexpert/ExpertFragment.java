@@ -25,19 +25,6 @@ public class ExpertFragment extends BaseViewBindingFragment<FragmentExpertBindin
         super(FragmentExpertBinding::inflate);
     }
 
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        binding = FragmentExpertBinding.inflate(inflater, container, false);
-        return binding.getRoot();
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
-    }
-
     @Override
     public void onClick(View view) {
 

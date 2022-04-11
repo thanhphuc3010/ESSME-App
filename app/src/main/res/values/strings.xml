@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ESSME</string>
     <string name="leading_expert">Leading Expert</string>
+    <string name="fields">Fields</string>
 </resources>
