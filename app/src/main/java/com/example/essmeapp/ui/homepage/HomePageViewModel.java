@@ -1,4 +1,4 @@
-package com.example.essmeapp;
+package com.example.essmeapp.ui.homepage;
 
 import com.example.essmeapp.codebase.BaseViewModel;
 import com.example.essmeapp.model.HomePage;

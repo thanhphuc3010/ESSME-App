@@ -1,4 +1,4 @@
-package com.example.essmeapp;
+package com.example.essmeapp.ui.homepage;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -11,9 +11,9 @@ import com.example.essmeapp.codebase.BaseFragment;
 import com.example.essmeapp.databinding.FragmentHomePageBinding;
 import com.example.essmeapp.model.Expert;
 import com.example.essmeapp.model.HomePage;
+import com.example.essmeapp.ui.hptopexpert.TopExpertAdapter;
 
 import java.util.List;
-import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;

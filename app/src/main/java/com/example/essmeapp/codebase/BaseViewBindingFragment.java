@@ -7,21 +7,19 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.viewbinding.ViewBinding;
 
 /**
  * Created by: phucpt
- * Date: 4/10/2022
- * Time: 7:11 PM
+ * Date: 4/11/2022
+ * Time: 1:44 PM
  */
 
-abstract public class BaseFragment<VB extends ViewBinding, VM extends BaseViewModel> extends BaseCoreFragment {
+abstract public class BaseViewBindingFragment<VB extends ViewBinding> extends BaseCoreFragment {
     protected VB binding;
-    protected VM viewModel;
     protected IFragmentInflate<VB> inflate;
 
-    public BaseFragment(IFragmentInflate<VB> inflate) {
+    public BaseViewBindingFragment(IFragmentInflate<VB> inflate) {
         this.inflate = inflate;
     }
 
@@ -29,9 +27,6 @@ abstract public class BaseFragment<VB extends ViewBinding, VM extends BaseViewMo
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = inflate.inflate(inflater, container, false);
-        viewModel = new ViewModelProvider(this).get(getViewModel());
         return binding.getRoot();
     }
-
-    protected abstract Class<VM> getViewModel();
 }

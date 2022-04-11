@@ -1,4 +1,4 @@
-package com.example.essmeapp;
+package com.example.essmeapp.codebase;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
