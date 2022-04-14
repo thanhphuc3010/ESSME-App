@@ -76,11 +76,14 @@ public class HomePageFragment extends BaseFragment<FragmentHomePageBinding, Home
 
     @Override
     public void initializeData() {
-        viewModel.getHomePage.enqueue(new Callback<HomePage>() {
+        viewModel.getHomePage.clone().enqueue(new Callback<HomePage>() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onResponse(Call<HomePage> call, Response<HomePage> response) {
                 HomePage homePage = response.body();
+
+                if (homePage == null) return;
+
                 List<Expert> experts = homePage.getTopExperts();
                 topExpertAdapter.submitData(experts);
 
