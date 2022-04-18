@@ -8,7 +8,9 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.navigation.Navigation;
 
+import com.example.essmeapp.R;
 import com.example.essmeapp.codebase.BaseFragment;
 import com.example.essmeapp.databinding.FragmentHomePageBinding;
 import com.example.essmeapp.model.Expert;
@@ -71,7 +73,12 @@ public class HomePageFragment extends BaseFragment<FragmentHomePageBinding, Home
 
     @Override
     public void initializeEvents() {
-
+        binding.txtFQAs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_homePageFragment_to_FQAsFragment);
+            }
+        });
     }
 
     @Override

@@ -14,6 +14,9 @@
             android:name="isHomePage"
             android:defaultValue="true"
             app:argType="boolean" />
+        <action
+            android:id="@+id/action_homePageFragment_to_FQAsFragment"
+            app:destination="@id/FQAsFragment" />
     </fragment>
 
     <fragment
@@ -32,4 +35,9 @@
         android:name="com.example.essmeapp.AccountFragment"
         android:label="fragment_account"
         tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/FQAsFragment"
+        android:name="com.example.essmeapp.ui.fqas.FQAsFragment"
+        android:label="fragment_fqas"
+        tools:layout="@layout/fragment_fqas" />
 </navigation>
