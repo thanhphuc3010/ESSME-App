@@ -3,21 +3,37 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/phucpt/AndroidStudioProjects/ESSMEApp/app/src/main/res/drawable/bg_button_circle.xml" value="0.1825" />
-        <entry key="..\:/Users/phucpt/AndroidStudioProjects/ESSMEApp/app/src/main/res/drawable/bg_rounded_8dp_no_ripple.xml" value="0.1825" />
-        <entry key="..\:/Users/phucpt/AndroidStudioProjects/ESSMEApp/app/src/main/res/drawable/bg_rounded_8dp_no_ripple_white.xml" value="0.1825" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/drawable/bg_button_circle.xml" value="0.18" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/drawable/bg_rounded_8dp_no_ripple.xml" value="0.18" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/drawable/circle_white.xml" value="0.18" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.18" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.18" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/drawable/ic_bg_primary.xml" value="0.18" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/drawable/ic_launcher_background.xml" value="0.18" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/drawable/ic_notifications.xml" value="0.18" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/drawable/pie_btn_8dp.xml" value="0.1325" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/drawable/pie_recrangle_8dp_left.xml" value="0.1325" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/drawable/pie_rectangle_4dp_stroke.xml" value="0.1325" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/drawable/pie_rectangle_8dp_right.xml" value="0.1325" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/drawable/pie_rectangle_8dp_stroke.xml" value="0.1325" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/drawable/pie_rectangle_8dp_stroke_left.xml" value="0.1325" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/drawable/pie_rectangle_8dp_stroke_right.xml" value="0.1325" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/drawable/rectangle_8dp_stroke.xml" value="0.1325" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/layout/activity_expert_detail.xml" value="0.22" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/layout/activity_fields.xml" value="0.22" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/layout/activity_fields_detail.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/layout/fragment_expert.xml" value="0.15427350427350428" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/layout/fragment_home_page.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/layout/fragment_order_expert_history.xml" value="0.22" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/layout/fragment_peronal_infor_expert.xml" value="0.15427350427350428" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/layout/fragment_personal_infor_customer.xml" value="0.15427350427350428" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/layout/fragment_personal_infor_expert.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Duychien/ESSME-App/app/src/main/res/layout/fragment_qa_history.xml" value="0.15427350427350428" />
         <entry key="..\:/Users/phucpt/AndroidStudioProjects/ESSMEApp/app/src/main/res/drawable/ic_bg_primary.xml" value="0.1825" />
         <entry key="..\:/Users/phucpt/AndroidStudioProjects/ESSMEApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1825" />
-        <entry key="..\:/Users/phucpt/AndroidStudioProjects/ESSMEApp/app/src/main/res/drawable/selector.xml" value="0.2765" />
         <entry key="..\:/Users/phucpt/AndroidStudioProjects/ESSMEApp/app/src/main/res/layout/activity_main.xml" value="0.35989583333333336" />
-        <entry key="..\:/Users/phucpt/AndroidStudioProjects/ESSMEApp/app/src/main/res/layout/fragment_expert.xml" value="0.25" />
-        <entry key="..\:/Users/phucpt/AndroidStudioProjects/ESSMEApp/app/src/main/res/layout/fragment_field.xml" value="0.35989583333333336" />
-        <entry key="..\:/Users/phucpt/AndroidStudioProjects/ESSMEApp/app/src/main/res/layout/fragment_fqas.xml" value="0.25" />
-        <entry key="..\:/Users/phucpt/AndroidStudioProjects/ESSMEApp/app/src/main/res/layout/fragment_home_page.xml" value="0.33" />
-        <entry key="..\:/Users/phucpt/AndroidStudioProjects/ESSMEApp/app/src/main/res/layout/item_answer.xml" value="0.33" />
-        <entry key="..\:/Users/phucpt/AndroidStudioProjects/ESSMEApp/app/src/main/res/layout/item_field.xml" value="0.35989583333333336" />
-        <entry key="..\:/Users/phucpt/AndroidStudioProjects/ESSMEApp/app/src/main/res/layout/item_functional_question_answers.xml" value="0.22" />
-        <entry key="..\:/Users/phucpt/AndroidStudioProjects/ESSMEApp/app/src/main/res/menu/bottom_menu.xml" value="0.35989583333333336" />
+        <entry key="..\:/Users/phucpt/AndroidStudioProjects/ESSMEApp/app/src/main/res/layout/fragment_home_page.xml" value="0.25" />
       </map>
     </option>
   </component>

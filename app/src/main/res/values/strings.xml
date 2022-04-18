@@ -9,4 +9,12 @@
     <string name="common_account">Account</string>
     <string name="fqas">FQAs</string>
     <string name="demo_answer">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate ...</string>
+    <string name="Introduction">Introduction</string>
+    <string name="Expert_name">Expert Name</string>
+    <string name="Position">Position</string>
+    <string name="company_university">Company/University</string>
+    <string name="order_expert">order Expert</string>
+    <string name="hint_requirement">Enter your requirement ...</string>
+    <string name="send">Send</string>
+    <string name="information_technology">Information Technology</string>
 </resources>
