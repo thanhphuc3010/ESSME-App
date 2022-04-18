@@ -11,8 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.essmeapp.IBaseView;
-
 /**
  * Created by: phucpt
  * Date: 4/10/2022

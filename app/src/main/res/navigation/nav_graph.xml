@@ -7,7 +7,37 @@
 
     <fragment
         android:id="@+id/homePageFragment"
-        android:name="com.example.essmeapp.HomePageFragment"
+        android:name="com.example.essmeapp.ui.homepage.HomePageFragment"
         android:label="HomePageFragment"
-        tools:layout="@layout/fragment_home_page" />
+        tools:layout="@layout/fragment_home_page">
+        <argument
+            android:name="isHomePage"
+            android:defaultValue="true"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_homePageFragment_to_FQAsFragment"
+            app:destination="@id/FQAsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homePageFragmentNotHasExpert"
+        android:name="com.example.essmeapp.ui.homepage.HomePageFragment"
+        android:label="HomePageFragment"
+        tools:layout="@layout/fragment_home_page">
+        <argument
+            android:name="isHomePage"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.essmeapp.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/FQAsFragment"
+        android:name="com.example.essmeapp.ui.fqas.FQAsFragment"
+        android:label="fragment_fqas"
+        tools:layout="@layout/fragment_fqas" />
 </navigation>

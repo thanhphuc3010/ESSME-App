@@ -1,4 +1,4 @@
-package com.example.essmeapp;
+package com.example.essmeapp.ui.hptopexpert;
 
 import android.os.Bundle;
 
@@ -8,7 +8,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.essmeapp.model.Expert;
-import com.example.essmeapp.service.ExpertFragment;
+import com.example.essmeapp.ui.hptopexpert.ExpertFragment;
 
 import java.util.List;
 
