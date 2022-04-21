@@ -17,4 +17,6 @@
     <string name="hint_requirement">Enter your requirement ...</string>
     <string name="send">Send</string>
     <string name="information_technology">Information Technology</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="gets_to_know_with_essme">Gets to know with ESSME</string>
 </resources>
