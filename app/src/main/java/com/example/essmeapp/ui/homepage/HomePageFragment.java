@@ -8,7 +8,9 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.navigation.Navigation;
 
+import com.example.essmeapp.R;
 import com.example.essmeapp.codebase.BaseFragment;
 import com.example.essmeapp.databinding.FragmentHomePageBinding;
 import com.example.essmeapp.model.Expert;
@@ -71,16 +73,24 @@ public class HomePageFragment extends BaseFragment<FragmentHomePageBinding, Home
 
     @Override
     public void initializeEvents() {
-
+        binding.txtFQAs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_homePageFragment_to_FQAsFragment);
+            }
+        });
     }
 
     @Override
     public void initializeData() {
-        viewModel.getHomePage.enqueue(new Callback<HomePage>() {
+        viewModel.getHomePage.clone().enqueue(new Callback<HomePage>() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onResponse(Call<HomePage> call, Response<HomePage> response) {
                 HomePage homePage = response.body();
+
+                if (homePage == null) return;
+
                 List<Expert> experts = homePage.getTopExperts();
                 topExpertAdapter.submitData(experts);
 

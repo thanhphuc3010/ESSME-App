@@ -11,6 +11,8 @@ import androidx.annotation.Nullable;
  * Time: 8:33 PM
  */
 
+// Functional Interface là interface chỉ chứa duy nhất 1 abstract function, có thể chứa các default function
+
 @FunctionalInterface
 public interface IFragmentInflate<T> {
     T inflate(LayoutInflater inflater, @Nullable ViewGroup container, Boolean attachToParent);
