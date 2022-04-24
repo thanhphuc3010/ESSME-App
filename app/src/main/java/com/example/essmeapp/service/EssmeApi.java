@@ -1,5 +1,9 @@
 package com.example.essmeapp.service;
 
+import android.widget.ExpandableListAdapter;
+
+import com.example.essmeapp.model.Expert;
+import com.example.essmeapp.model.ExpertResponse;
 import com.example.essmeapp.model.HomePage;
 import com.example.essmeapp.model.Question;
 
@@ -21,4 +25,7 @@ public interface EssmeApi {
 
     @GET("questions?limit=1000&sort=createdAt&desc=false")
     Call<List<Question>> getQuestions();
+
+    @GET("experts/search?what=khoa&radius=5&page=0&size=100&asc=true")
+    Call<ExpertResponse> getExperts();
 }
