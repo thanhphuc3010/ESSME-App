@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_homePageFragment_to_FQAsFragment"
             app:destination="@id/FQAsFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_expertFragment"
+            app:destination="@id/expertFragment" />
     </fragment>
 
     <fragment
@@ -53,4 +56,8 @@
             android:id="@+id/action_loginFragment_to_homePageFragment"
             app:destination="@id/homePageFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/expertFragment"
+        android:name="com.example.essmeapp.ui.listexpert.ExpertFragment"
+        android:label="ExpertFragment" />
 </navigation>

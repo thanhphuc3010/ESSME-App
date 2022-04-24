@@ -23,12 +23,10 @@ public class FQAsFragment extends BaseViewBindingFragment<FragmentFqasBinding> {
 
     @Override
     public void onClick(View view) {
-
     }
 
     @Override
     public void initializeViews() {
-
     }
 
     @Override
@@ -39,6 +37,10 @@ public class FQAsFragment extends BaseViewBindingFragment<FragmentFqasBinding> {
 
     @Override
     public void initializeEvents() {
+    }
+
+    @Override
+    public void initializeData() {
         ApiClient.getAPI().getQuestions().clone().enqueue(new Callback<List<Question>>() {
             @Override
             public void onResponse(Call<List<Question>> call, Response<List<Question>> response) {
@@ -52,10 +54,5 @@ public class FQAsFragment extends BaseViewBindingFragment<FragmentFqasBinding> {
 
             }
         });
-    }
-
-    @Override
-    public void initializeData() {
-
     }
 }

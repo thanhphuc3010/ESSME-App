@@ -73,11 +73,11 @@ public class HomePageFragment extends BaseFragment<FragmentHomePageBinding, Home
 
     @Override
     public void initializeEvents() {
-        binding.txtFQAs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_homePageFragment_to_FQAsFragment);
-            }
+        binding.txtFQAs.setOnClickListener(view ->
+                Navigation.findNavController(view).navigate(R.id.action_homePageFragment_to_FQAsFragment));
+
+        binding.txtExpert.setOnClickListener(view -> {
+            Navigation.findNavController(view).navigate(R.id.action_homePageFragment_to_expertFragment);
         });
     }
 
