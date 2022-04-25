@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 
 import com.example.essmeapp.R;
 import com.example.essmeapp.SharedPrefUtils;
@@ -25,6 +26,7 @@ import retrofit2.Response;
 
 public class ExpertDetailFragment extends BaseViewBindingFragment<FragmentExpertDetailBinding> {
     private Expert expert;
+    private AlertDialog.Builder builder;
 
     public ExpertDetailFragment() {
         super(FragmentExpertDetailBinding::inflate);
@@ -53,6 +55,7 @@ public class ExpertDetailFragment extends BaseViewBindingFragment<FragmentExpert
 
     @Override
     public void initializeComponents() {
+        builder = new AlertDialog.Builder(requireContext());
 
     }
 
@@ -76,9 +79,20 @@ public class ExpertDetailFragment extends BaseViewBindingFragment<FragmentExpert
         Gson gson = new Gson();
 
         String authToken = SharedPrefUtils.getAuthToken(requireActivity());
-        ApiClient.getAPI().orderExpert(gson.toJson(directRequest), "Bearer " + authToken).enqueue(new Callback<DirectRequest>() {
+        ApiClient.getAPI().orderExpertDirect(gson.toJson(directRequest), "Bearer " + authToken).enqueue(new Callback<DirectRequest>() {
             @Override
             public void onResponse(Call<DirectRequest> call, Response<DirectRequest> response) {
+                builder.setMessage(getString(R.string.ordert_expert_success))
+                        .setCancelable(false)
+                        .setPositiveButton(R.string.common_ok, (dialog, id) -> binding.edtContent.setText(""))
+                        .setNegativeButton("No", (dialog, id) -> {
+                            dialog.cancel();
+                        });
+
+                AlertDialog alert = builder.create();
+                alert.setTitle("");
+                alert.show();
+                alert.getButton(AlertDialog.BUTTON_NEGATIVE).setVisibility(View.GONE);
                 Log.d(this.getClass().getSimpleName(), "Order Expert Success....");
             }
 

@@ -14,4 +14,10 @@ public class SharedPrefUtils {
         String authToken = sharedPref.getString(activity.getString(R.string.auth_token), "");
         return authToken;
     }
+
+    public static String getId(Activity activity) {
+        SharedPreferences sharedPref = activity.getSharedPreferences(activity.getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        String id = sharedPref.getString("id", "");
+        return id;
+    }
 }

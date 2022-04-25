@@ -97,10 +97,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 try {
                     GoogleSignInAccount account = task.getResult(ApiException.class);
                     firebaseAuthWithGoogle(account.getIdToken());
-                    SharedPreferences sharedPref = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPref.edit();
-                    editor.putString(getString(R.string.auth_token), account.getIdToken());
-                    editor.apply();
                 } catch (ApiException e) {
                     Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
                 }
@@ -123,6 +119,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                         if (task.isSuccessful()) {
                                             String idToken = task.getResult().getToken();
                                             Log.d(TAG, "1 " + idToken);
+                                            SharedPreferences sharedPref = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+                                            SharedPreferences.Editor editor = sharedPref.edit();
+                                            editor.putString(getString(R.string.auth_token), idToken);
+                                            editor.putString("id", mAuth.getCurrentUser().getUid());
+                                            editor.apply();
                                             // ...
                                         } else {
                                             // Handle error -> task.getException();

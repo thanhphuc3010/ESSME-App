@@ -1,14 +1,12 @@
 package com.example.essmeapp;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.util.Log;
 import android.view.View;
 
+import androidx.navigation.Navigation;
+
 import com.example.essmeapp.codebase.BaseViewBindingFragment;
 import com.example.essmeapp.databinding.FragmentAccountBinding;
-
-import java.util.Objects;
 
 public class AccountFragment extends BaseViewBindingFragment<FragmentAccountBinding> {
     public AccountFragment() {
@@ -20,6 +18,9 @@ public class AccountFragment extends BaseViewBindingFragment<FragmentAccountBind
         switch (view.getId()) {
             case R.id.btnSignOut:
                 ((MainActivity) getActivity()).signOut();
+                break;
+            case R.id.btnOrderHistory:
+                Navigation.findNavController(view).navigate(R.id.action_accountFragment_to_fragmentOrderExpert);
                 break;
         }
     }
@@ -37,6 +38,7 @@ public class AccountFragment extends BaseViewBindingFragment<FragmentAccountBind
     @Override
     public void initializeEvents() {
         binding.btnSignOut.setOnClickListener(this);
+        binding.btnOrderHistory.setOnClickListener(this);
     }
 
     @Override

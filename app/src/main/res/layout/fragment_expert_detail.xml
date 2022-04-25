@@ -31,10 +31,10 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginStart="@dimen/d_16"
-            android:layout_marginEnd="@dimen/d_16"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="@dimen/d_16"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
@@ -118,7 +118,9 @@
             android:hint="@string/hint_requirement"
             android:inputType="text|textMultiLine"
             android:padding="@dimen/d_8"
-            android:textColorHint="@color/black" />
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/btnSend"
@@ -134,7 +136,6 @@
             android:textAllCaps="true"
             android:textColor="@color/black"
             android:textStyle="bold" />
-
 
     </LinearLayout>
 
