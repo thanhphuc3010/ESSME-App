@@ -13,4 +13,9 @@
         <item name="android:statusBarColor" tools:targetApi="l">@color/teal_primary</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="TabLayoutTextAppearance">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize" tools:ignore="SpUsage">14dp</item>
+    </style>
 </resources>

@@ -25,6 +25,10 @@ public class Request {
     public Request() {
     }
 
+    public Request(String title) {
+        this.title = title;
+    }
+
     public Request(ArrayList<String> topic, String title, String content, String customerId, String uid) {
         this.topic = topic;
         this.title = title;
