@@ -20,6 +20,12 @@ public class ExpertAdapter extends BaseSimpleAdapter<Expert, ItemExpertBinding, 
         return new ExpertViewHolder(binding);
     }
 
+    @Override
+    public void onBindViewHolder(@NonNull ExpertViewHolder holder, int position) {
+        super.onBindViewHolder(holder, position);
+        registerOnItemClickListener(holder);
+    }
+
     public class ExpertViewHolder extends BaseSimpleAdapter.ViewHolder<ItemExpertBinding> {
 
         public ExpertViewHolder(@NonNull ItemExpertBinding binding) {

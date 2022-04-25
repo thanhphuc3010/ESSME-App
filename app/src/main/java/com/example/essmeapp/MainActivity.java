@@ -1,6 +1,8 @@
 package com.example.essmeapp;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -95,6 +97,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 try {
                     GoogleSignInAccount account = task.getResult(ApiException.class);
                     firebaseAuthWithGoogle(account.getIdToken());
+                    SharedPreferences sharedPref = this.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPref.edit();
+                    editor.putString(getString(R.string.auth_token), account.getIdToken());
+                    editor.apply();
                 } catch (ApiException e) {
                     Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
                 }

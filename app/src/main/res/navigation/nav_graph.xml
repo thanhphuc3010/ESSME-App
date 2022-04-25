@@ -59,5 +59,13 @@
     <fragment
         android:id="@+id/expertFragment"
         android:name="com.example.essmeapp.ui.listexpert.ExpertFragment"
-        android:label="ExpertFragment" />
+        android:label="ExpertFragment" >
+        <action
+            android:id="@+id/action_expertFragment_to_expertDetailFragment"
+            app:destination="@id/expertDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/expertDetailFragment"
+        android:name="com.example.essmeapp.ui.ExpertDetailFragment"
+        android:label="ExpertDetailFragment" />
 </navigation>
